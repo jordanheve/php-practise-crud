@@ -105,6 +105,35 @@
         $password=password_hash($password, PASSWORD_BCRYPT, ["cost"=>10]);
     }
 
+    //save user data
+
+    $save_user=conection();
+    $save_user=$save_user->prepare("INSERT INTO usuario(usuario_nombre, usuario_apellido, usuario_usuario, usuario_clave, usuario_email) VALUES(:name, :lastName, :username, :password, :email)");
     
+    $markers=[
+        ':name'=>$name,
+        ':lastName'=>$lastName,
+        ':username'=>$username,
+        ':password'=>$password,
+        ':email'=>$email
+    ];
+    
+    $save_user->execute($markers);
      
+    if($save_user->rowCount()==1){
+        echo '
+        <div class="alert alert-success" role="alert">
+        Registro realizado correctamente!
+      </div>
+        ';
+
+    }else{
+        echo '
+        <div class="alert alert-danger" role="alert">
+        Error inesperado, no se pudo registrar el usuario intente de nuevo
+      </div>
+        ';
+    }
+
+    $save_user=null;
 ?>
