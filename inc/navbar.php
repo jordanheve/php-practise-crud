@@ -13,7 +13,7 @@
             Usuarios
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Nueva</a></li>
+            <li><a class="dropdown-item" href="index.php?view=user_new">Nuevo</a></li>
             <li><a class="dropdown-item" href="#">Lista</a></li>
             <li><a class="dropdown-item" href="#">Buscar</a></li>
           </ul>
