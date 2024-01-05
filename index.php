@@ -16,13 +16,16 @@
         if(is_file('./views/'.$_GET['view'].'.php') && $_GET['view'] != 'login' && $_GET['view'] != '404'){
             include "./inc/navbar.php";
             include "./views/".$_GET['view'].".php";
+            include "./inc/script.php";
         }elseif( $_GET['view'] == 'login'){
             include "./views/login.php";
+            include "./inc/script.php";
         }else {
             include "./views/404.php";
         }
 
     ?>
+   
 
 </body>
 </html>

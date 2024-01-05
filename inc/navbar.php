@@ -14,8 +14,8 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="index.php?view=user_new">Nuevo</a></li>
-            <li><a class="dropdown-item" href="#">Lista</a></li>
-            <li><a class="dropdown-item" href="#">Buscar</a></li>
+            <li><a class="dropdown-item" href="index.php?view=user_list">Lista</a></li>
+            <li><a class="dropdown-item" href="index.php?view=user_search">Buscar</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">

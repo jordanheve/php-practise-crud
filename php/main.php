@@ -6,8 +6,9 @@
     }
 
     //check data
+    //returns true if data doesnt match
     function check_data($filter, $string){
-        return preg_match("/^".$filter."$/", $string);
+        return !preg_match("/^".$filter."$/", $string);
     }
     
 
